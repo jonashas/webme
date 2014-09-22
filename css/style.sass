@@ -1,0 +1,37 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700)
+
+$font-stack: 'Open Sans', sans-serif
+$text:#222
+$color:#FF1300
+
+=box-sizing($box-type: border-box)
+	-moz-box-sizing: $box-type
+	-webkit-box-sizing: $box-type
+	box-sizing: $box-type
+
+=transition($properties: all, $duration: .2s, $easing: ease)
+	-moz-transition: $properties $duration $easing
+	-webkit-transition: $properties $duration $easing
+	-o-transition: $properties $duration $easing
+	transition: $properties $duration $easing
+
+body
+	font: 62.5% $font-stack
+	color: $text
+	
+a
+	+transition
+	
+nav
+	ul
+		margin: 0
+		padding: 0
+		list-style: none
+		
+	li
+		display: inline-block
+	
+	a
+		display: block
+		padding: 6px 12px
+		text-decoration: none
